@@ -5,6 +5,7 @@ public class SameTree {
         if (p == null && q == null) {
             return true;
         }
+
         if ((p != null && q == null) || (p == null && q != null)) {
             return false;
         }
