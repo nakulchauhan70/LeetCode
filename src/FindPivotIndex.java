@@ -8,7 +8,7 @@ public class FindPivotIndex {
 
         int sum = 0;
         int leftSum = 0;
-        int rightSum = 0;
+        int rightSum;
 
         for (int num : nums) {
             sum += num;

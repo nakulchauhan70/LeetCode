@@ -3,7 +3,8 @@ package com.dynamicprograming;
 //O(n^2) time | O(1) space
 public class LongestPalindromicSubstring {
     public static void main(String[] args) {
-        longestPalindrome("babad");
+        System.out.println(longestPalindrome("babad"));
+        System.out.println(longestPalindrome("abccccdd"));
     }
 
     public static String longestPalindrome(String s) {
