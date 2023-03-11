@@ -3,10 +3,6 @@ package com.binarytree;
 import com.TreeNode;
 
 public class ValidateBinarySearchTree {
-    public boolean isValidBST(TreeNode root) {
-        return isValidBST(root, null, null);
-    }
-
     private static boolean isValidBST(TreeNode root, Integer min, Integer max) {
         if (root == null) {
             return true;
@@ -17,6 +13,10 @@ public class ValidateBinarySearchTree {
         }
 
         return isValidBST(root.left, min, root.val) && isValidBST(root.right, root.val, max);
+    }
+
+    public boolean isValidBST(TreeNode root) {
+        return isValidBST(root, null, null);
     }
 
 //    private static boolean isValidBST(TreeNode root, Integer min, Integer max) {

@@ -1,10 +1,6 @@
 package com.tree;
 
 public class UniqueBinarySearchTrees {
-    public int numTrees(int n) {
-        return numTrees(1, n);
-    }
-
     public static int numTrees(int start, int end) {
         if (start >= end) {
             return 1;
@@ -16,5 +12,9 @@ public class UniqueBinarySearchTrees {
         }
 
         return countUniques;
+    }
+
+    public int numTrees(int n) {
+        return numTrees(1, n);
     }
 }

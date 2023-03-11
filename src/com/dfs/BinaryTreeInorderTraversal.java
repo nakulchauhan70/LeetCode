@@ -6,13 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BinaryTreeInorderTraversal {
-    public List<Integer> inorderTraversal(TreeNode root) {
-        List<Integer> result = new ArrayList<>();
-        inOrder(root, result);
-
-        return result;
-    }
-
     public static List<Integer> inOrder(TreeNode node, List<Integer> arrayList) {
         if (node != null) {
             inOrder(node.left, arrayList);
@@ -21,5 +14,12 @@ public class BinaryTreeInorderTraversal {
         }
 
         return arrayList;
+    }
+
+    public List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
+        inOrder(root, result);
+
+        return result;
     }
 }

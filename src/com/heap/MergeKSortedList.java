@@ -42,22 +42,6 @@ public class MergeKSortedList {
 
     //////////////////////////////////////////////////////////////////
 
-    class Pair implements Comparable<Pair> {
-        int rowNo;
-        int elemPos;
-        int elemVal;
-
-        public Pair(int rowNo, int elemPos, int elemVal) {
-            this.rowNo = rowNo;
-            this.elemPos = elemPos;
-            this.elemVal = elemVal;
-        }
-
-        public int compareTo(Pair p) {
-            return this.elemVal - p.elemVal;
-        }
-    }
-
     public List<Integer> mergeKLists(ArrayList<ArrayList<Integer>> lists) {
         PriorityQueue<Pair> priorityQueue = new PriorityQueue<>();
         List<Integer> result = new ArrayList<>();
@@ -81,5 +65,19 @@ public class MergeKSortedList {
         return result;
     }
 
+    class Pair implements Comparable<Pair> {
+        int rowNo;
+        int elemPos;
+        int elemVal;
 
+        public Pair(int rowNo, int elemPos, int elemVal) {
+            this.rowNo = rowNo;
+            this.elemPos = elemPos;
+            this.elemVal = elemVal;
+        }
+
+        public int compareTo(Pair p) {
+            return this.elemVal - p.elemVal;
+        }
+    }
 }
