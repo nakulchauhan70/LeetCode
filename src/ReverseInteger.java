@@ -1,13 +1,14 @@
+//VIMP
 public class ReverseInteger {
     public static void main(String[] args) {
         System.out.println(reverse(123));
-        System.out.println(reverse(-123));
+        System.out.println(reverse2(-123));
         System.out.println(reverse(120));
         System.out.println(reverse(-10));
         System.out.println(reverse(10));
     }
 
-    public static int reverse(int x) {
+    public static int reverse2(int x) {
         String s = String.valueOf(x);
         char[] chars = s.toCharArray();
         char temp;
@@ -33,4 +34,24 @@ public class ReverseInteger {
             return 0;
         }
     }
+
+    public static int reverse(int x) {
+        long reverse = 0;
+        int rem;
+        int num = x;
+
+        //-123%10 => -3(below code), 7(google)
+        while (num != 0) {
+            rem = num % 10;
+            reverse = reverse * 10 + rem;
+            num = num / 10;
+        }
+
+        if (reverse < Integer.MIN_VALUE || reverse > Integer.MAX_VALUE) {
+            return 0;
+        }
+
+        return (int) reverse;
+    }
+
 }
