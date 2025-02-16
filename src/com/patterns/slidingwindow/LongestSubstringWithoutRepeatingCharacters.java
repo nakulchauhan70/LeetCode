@@ -1,4 +1,4 @@
-package com.string;
+package com.patterns.slidingwindow;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -10,7 +10,6 @@ public class LongestSubstringWithoutRepeatingCharacters {
 //        System.out.println(lengthOfLongestSubstring("bbbbb"));
 //        System.out.println(lengthOfLongestSubstring("pwwkew"));
 //        System.out.println(lengthOfLongestSubstring("dvdf"));
-
     }
 
 
